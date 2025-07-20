@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prius and the Dragon FAQ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #000;
+      color: #eee;
+      padding: 2rem;
+    }
+    h1 {
+      color: #fff;
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      margin-top: 3rem;
+      border-bottom: 2px solid #444;
+      padding-bottom: 0.25rem;
+      color: #ccc;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+    }
+    .accordion {
+      background-color: #111;
+      color: #eee;
+      cursor: pointer;
+      padding: 1rem;
+      width: 100%;
+      border: 1px solid #444;
+      border-radius: 0.5rem;
+      text-align: left;
+      outline: none;
+      transition: background-color 0.2s ease;
+      margin-top: 1rem;
+    }
+    .accordion:hover {
+      background-color: #222;
+    }
+    .active, .accordion:focus {
+      background-color: #222;
+    }
+    .panel {
+      padding: 1rem;
+      display: none;
+      background-color: #111;
+      border: 1px solid #444;
+      border-top: none;
+      border-radius: 0 0 0.5rem 0.5rem;
+      color: #ccc;
+      margin-bottom: 1rem;
+    }
+    a {
+      color: #00bfff !important;
+      text-decoration: underline;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+    a:hover { text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h1>Prius and the Dragon – FAQ</h1>
+  <div id="faq-container"></div>
+  <script>
+    const faqs =
+[
+  {
+    "category": "Vehicle & Driving",
+    "q": "Do I need any special modifications to my Prius to participate?",
+    "a": "No, a stock Prius can handle the Dragon just fine. Just make sure your brakes, tires, and suspension are in good shape."
+  },
+  {
+    "category": "Vehicle & Driving",
+    "q": "Is this a race or time trial?",
+    "a": "Not at all. This is not a race or time trial\u2014it's a scenic and social group drive. The Tail of the Dragon is a public road patrolled by both North Carolina and Tennessee law enforcement, with strictly enforced speed limits. Drivers are expected to follow all traffic laws, stay in their lane, and drive within their comfort zone. Enjoy the ride and respect the mountain."
+  },
+  {
+    "category": "Vehicle & Driving",
+    "q": "What should I do if my car breaks down?",
+    "a": "Bring basic tools, a spare tire, and know your roadside assistance info. Cell service is limited, but people usually help each other out."
+  },
+  {
+    "category": "Vehicle & Driving",
+    "q": "Can a stock Prius handle the Tail of the Dragon?",
+    "a": "Absolutely. The road is paved and well-maintained. Just drive within your limits and enjoy the curves!"
+  },
+  {
+    "category": "Event Schedule & Logistics",
+    "q": "When should I arrive for check-in?",
+    "a": "Morning meetup usually starts around 9:00 AM at Fontana Dam. Exact times will be posted on Facebook before the event."
+  },
+  {
+    "category": "Event Schedule & Logistics",
+    "q": "Is there a rain date or weather plan?",
+    "a": "The event happens rain or shine, but drive cautiously. Severe weather updates will be posted in the Facebook group."
+  },
+  {
+    "category": "Event Schedule & Logistics",
+    "q": "Can I camp instead of booking a hotel?",
+    "a": "Yes! There are several campgrounds and primitive camping spots nearby. We list a few in the lodging section."
+  },
+  {
+    "category": "Event Schedule & Logistics",
+    "q": "When is the group photo taken?",
+    "a": "Usually during the morning meetup at Fontana Dam before the drive begins. The time will be posted on the day-of schedule in the Facebook group."
+  },
+  {
+    "category": "Shirts, Merch, Awards",
+    "q": "Can I still buy a shirt if I didn\u2019t pre-order?",
+    "a": "We bring a few extras, but they go fast. Pre-ordering is your best bet."
+  },
+  {
+    "category": "Shirts, Merch, Awards",
+    "q": "Where can I purchase Prius and the Dragon specific merch?",
+    "a": "You can grab official Prius and the Dragon merch at the event or online if announced ahead of time. During the event, be sure to check out the Killboy Store\u2014they usually carry a small selection of our event-branded items. And don\u2019t forget: every registered attendee gets a free sticker!"
+  },
+  {
+    "category": "Shirts, Merch, Awards",
+    "q": "What are the awards categories?",
+    "a": "Categories vary each year, but in 2025 they included: Lowest Mileage, Best Off-Road Prius, Best Street Prius, Best Camping Prius, Highest Mileage, 'Cool Prius', 1st International Prius, Farthest Traveled, Longest Owned, and Best Bumper Stickers."
+  },
+  {
+    "category": "Shirts, Merch, Awards",
+    "q": "Is there a raffle or giveaway?",
+    "a": "Yep! We do giveaways and sponsor shoutouts during the luncheon\u2014sometimes including detailing kits, merch, and cool accessories."
+  },
+  {
+    "category": "Community & Conduct",
+    "q": "Can I bring a friend or ride along?",
+    "a": "Of course! Just let them know what to expect\u2014it\u2019s a chill, respectful community of Prius fans."
+  },
+  {
+    "category": "Community & Conduct",
+    "q": "Is alcohol allowed at the event?",
+    "a": "No drinking during the drive. Save it for after-hours at your lodging spot. Let\u2019s keep the roads safe."
+  },
+  {
+    "category": "Community & Conduct",
+    "q": "How do I volunteer or help out?",
+    "a": "We love help! Message an admin on the Facebook group if you\u2019d like to assist with setup, traffic, or check-in."
+  },
+  {
+    "category": "Event Details",
+    "q": "Where can I purchase photos taken on the Tail of the Dragon?",
+    "a": "There are a few professional photographers stationed along the Tail of the Dragon who capture action shots of your vehicle. After your run, visit: <ul><li><a href='https://www.killboy.com'>Killboy</a></li><li><a href='https://www.129slayer.com'>129Slayer</a></li><li><a href='https://www.us129photos.com'>US129Photos</a></li></ul> Look up your ride by date and vehicle type. Most of the time, they\u2019ll group Prius and the Dragon event photos into a special gallery."
+  },
+  {
+    "category": "Event Details",
+    "q": "What is the Tail of the Dragon?",
+    "a": "The Tail of the Dragon is a legendary 11-mile stretch of US Highway 129 on the border of North Carolina and Tennessee. It features 318 curves, making it one of the most thrilling and scenic roads in the country for driving and motorcycling."
+  },
+  {
+    "category": "Event Details",
+    "q": "What is Prius and the Dragon?",
+    "a": "Prius and the Dragon is an annual meetup for Toyota Prius enthusiasts held at the famous Tail of the Dragon. It\u2019s a free, community-driven event focused on group drives, scenic views, and connecting with fellow Prius fans. It started in 2023 and grows every year!"
+  }
+];
+
+    const grouped = faqs.reduce((acc, item) => {
+      if (!acc[item.category]) acc[item.category] = [];
+      acc[item.category].push(item);
+      return acc;
+    }, {});
+
+    const container = document.getElementById('faq-container');
+    for (let category in grouped) {
+      const header = document.createElement('h2');
+      header.textContent = category;
+      container.appendChild(header);
+
+      grouped[category].forEach(faq => {
+        const btn = document.createElement('button');
+        btn.className = 'accordion';
+        btn.innerHTML = faq.q;
+
+        const panel = document.createElement('div');
+        panel.className = 'panel';
+        panel.innerHTML = `<p>${faq.a}</p>`;
+
+        btn.onclick = function () {
+          this.classList.toggle('active');
+          panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+        };
+
+        container.appendChild(btn);
+        container.appendChild(panel);
+      });
+    }
+  </script>
+</body>
+</html>
