@@ -9,7 +9,7 @@
   <style>
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #000;
+     
       color: #eee;
       padding: 2rem;
     }
@@ -72,6 +72,21 @@
   <script>
     const faqs =
 [
+  {
+    "category": "Event Details",
+    "q": "Where can I purchase photos taken on the Tail of the Dragon?",
+    "a": "There are a few professional photographers stationed along the Tail of the Dragon who capture action shots of your vehicle. After your run, visit: <ul><li><a href='https://www.killboy.com'>Killboy</a></li><li><a href='https://www.129slayer.com'>129Slayer</a></li><li><a href='https://www.us129photos.com'>US129Photos</a></li></ul> Look up your ride by date and vehicle type. Most of the time, they\u2019ll group Prius and the Dragon event photos into a special gallery."
+  },
+  {
+    "category": "Event Details",
+    "q": "What is the Tail of the Dragon?",
+    "a": "The Tail of the Dragon is a legendary 11-mile stretch of US Highway 129 on the border of North Carolina and Tennessee. It features 318 curves, making it one of the most thrilling and scenic roads in the country for driving and motorcycling."
+  },
+  {
+    "category": "Event Details",
+    "q": "What is Prius and the Dragon?",
+    "a": "Prius and the Dragon is an annual meetup for Toyota Prius enthusiasts held at the famous Tail of the Dragon. It\u2019s a free, community-driven event focused on group drives, scenic views, and connecting with fellow Prius fans. It started in 2023 and grows every year!"
+  }
   {
     "category": "Vehicle & Driving",
     "q": "Do I need any special modifications to my Prius to participate?",
@@ -147,21 +162,7 @@
     "q": "How do I volunteer or help out?",
     "a": "We love help! Message an admin on the Facebook group if you\u2019d like to assist with setup, traffic, or check-in."
   },
-  {
-    "category": "Event Details",
-    "q": "Where can I purchase photos taken on the Tail of the Dragon?",
-    "a": "There are a few professional photographers stationed along the Tail of the Dragon who capture action shots of your vehicle. After your run, visit: <ul><li><a href='https://www.killboy.com'>Killboy</a></li><li><a href='https://www.129slayer.com'>129Slayer</a></li><li><a href='https://www.us129photos.com'>US129Photos</a></li></ul> Look up your ride by date and vehicle type. Most of the time, they\u2019ll group Prius and the Dragon event photos into a special gallery."
-  },
-  {
-    "category": "Event Details",
-    "q": "What is the Tail of the Dragon?",
-    "a": "The Tail of the Dragon is a legendary 11-mile stretch of US Highway 129 on the border of North Carolina and Tennessee. It features 318 curves, making it one of the most thrilling and scenic roads in the country for driving and motorcycling."
-  },
-  {
-    "category": "Event Details",
-    "q": "What is Prius and the Dragon?",
-    "a": "Prius and the Dragon is an annual meetup for Toyota Prius enthusiasts held at the famous Tail of the Dragon. It\u2019s a free, community-driven event focused on group drives, scenic views, and connecting with fellow Prius fans. It started in 2023 and grows every year!"
-  }
+  
 ];
 
     const grouped = faqs.reduce((acc, item) => {
