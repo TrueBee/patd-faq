@@ -20,12 +20,15 @@
       margin-bottom: 2rem;
     }
     h2 {
-      margin-top: 3rem;
+      margin-top: 4rem;
       border-bottom: 2px solid #444;
       padding-bottom: 0.25rem;
       color: #ccc;
       text-transform: uppercase;
       font-size: 1.4rem;
+    }
+    .faq-section {
+      margin-bottom: 4rem;
     }
     .accordion {
       background-color: #111;
@@ -63,107 +66,13 @@
     a:hover {
       text-decoration: none;
     }
-    a:hover { text-decoration: none; }
   </style>
 </head>
 <body>
-  <h1></h1>
+  <h1>Prius and the Dragon – FAQ</h1>
   <div id="faq-container"></div>
   <script>
-    const faqs =
-[
-  {
-    "category": "Event Details",
-    "q": "Where can I purchase photos taken on the Tail of the Dragon?",
-    "a": "There are a few professional photographers stationed along the Tail of the Dragon who capture action shots of your vehicle. After your run, visit: <ul><li><a href='https://www.killboy.com'>Killboy</a></li><li><a href='https://www.129slayer.com'>129Slayer</a></li><li><a href='https://www.us129photos.com'>US129Photos</a></li></ul> Look up your ride by date and vehicle type. Most of the time, they\u2019ll group Prius and the Dragon event photos into a special gallery."
-  },
-  {
-    "category": "Event Details",
-    "q": "What is the Tail of the Dragon?",
-    "a": "The Tail of the Dragon is a legendary 11-mile stretch of US Highway 129 on the border of North Carolina and Tennessee. It features 318 curves, making it one of the most thrilling and scenic roads in the country for driving and motorcycling."
-  },
-  {
-    "category": "Event Details",
-    "q": "What is Prius and the Dragon?",
-    "a": "Prius and the Dragon is an annual meetup for Toyota Prius enthusiasts held at the famous Tail of the Dragon. It\u2019s a free, community-driven event focused on group drives, scenic views, and connecting with fellow Prius fans. It started in 2023 and grows every year!"
-  }
-  {
-    "category": "Vehicle & Driving",
-    "q": "Do I need any special modifications to my Prius to participate?",
-    "a": "No, a stock Prius can handle the Dragon just fine. Just make sure your brakes, tires, and suspension are in good shape."
-  },
-  {
-    "category": "Vehicle & Driving",
-    "q": "Is this a race or time trial?",
-    "a": "Not at all. This is not a race or time trial\u2014it's a scenic and social group drive. The Tail of the Dragon is a public road patrolled by both North Carolina and Tennessee law enforcement, with strictly enforced speed limits. Drivers are expected to follow all traffic laws, stay in their lane, and drive within their comfort zone. Enjoy the ride and respect the mountain."
-  },
-  {
-    "category": "Vehicle & Driving",
-    "q": "What should I do if my car breaks down?",
-    "a": "Bring basic tools, a spare tire, and know your roadside assistance info. Cell service is limited, but people usually help each other out."
-  },
-  {
-    "category": "Vehicle & Driving",
-    "q": "Can a stock Prius handle the Tail of the Dragon?",
-    "a": "Absolutely. The road is paved and well-maintained. Just drive within your limits and enjoy the curves!"
-  },
-  {
-    "category": "Event Schedule & Logistics",
-    "q": "When should I arrive for check-in?",
-    "a": "Morning meetup usually starts around 9:00 AM at Fontana Dam. Exact times will be posted on Facebook before the event."
-  },
-  {
-    "category": "Event Schedule & Logistics",
-    "q": "Is there a rain date or weather plan?",
-    "a": "The event happens rain or shine, but drive cautiously. Severe weather updates will be posted in the Facebook group."
-  },
-  {
-    "category": "Event Schedule & Logistics",
-    "q": "Can I camp instead of booking a hotel?",
-    "a": "Yes! There are several campgrounds and primitive camping spots nearby. We list a few in the lodging section."
-  },
-  {
-    "category": "Event Schedule & Logistics",
-    "q": "When is the group photo taken?",
-    "a": "Usually during the morning meetup at Fontana Dam before the drive begins. The time will be posted on the day-of schedule in the Facebook group."
-  },
-  {
-    "category": "Shirts, Merch, Awards",
-    "q": "Can I still buy a shirt if I didn\u2019t pre-order?",
-    "a": "We bring a few extras, but they go fast. Pre-ordering is your best bet."
-  },
-  {
-    "category": "Shirts, Merch, Awards",
-    "q": "Where can I purchase Prius and the Dragon specific merch?",
-    "a": "You can grab official Prius and the Dragon merch at the event or online if announced ahead of time. During the event, be sure to check out the Killboy Store\u2014they usually carry a small selection of our event-branded items. And don\u2019t forget: every registered attendee gets a free sticker!"
-  },
-  {
-    "category": "Shirts, Merch, Awards",
-    "q": "What are the awards categories?",
-    "a": "Categories vary each year, but in 2025 they included: Lowest Mileage, Best Off-Road Prius, Best Street Prius, Best Camping Prius, Highest Mileage, 'Cool Prius', 1st International Prius, Farthest Traveled, Longest Owned, and Best Bumper Stickers."
-  },
-  {
-    "category": "Shirts, Merch, Awards",
-    "q": "Is there a raffle or giveaway?",
-    "a": "Yep! We do giveaways and sponsor shoutouts during the luncheon\u2014sometimes including detailing kits, merch, and cool accessories."
-  },
-  {
-    "category": "Community & Conduct",
-    "q": "Can I bring a friend or ride along?",
-    "a": "Of course! Just let them know what to expect\u2014it\u2019s a chill, respectful community of Prius fans."
-  },
-  {
-    "category": "Community & Conduct",
-    "q": "Is alcohol allowed at the event?",
-    "a": "No drinking during the drive. Save it for after-hours at your lodging spot. Let\u2019s keep the roads safe."
-  },
-  {
-    "category": "Community & Conduct",
-    "q": "How do I volunteer or help out?",
-    "a": "We love help! Message an admin on the Facebook group if you\u2019d like to assist with setup, traffic, or check-in."
-  },
-  
-];
+    const faqs = [{"q": "What is Prius and the Dragon?", "a": "An annual community event for Prius owners held on the Tail of the Dragon, started in 2023, with group drives, photos, lunch, merch, and awards.", "category": "About the Event"}, {"q": "What is the Tail of the Dragon?", "a": "A famous 11-mile stretch of US129 with 318 curves, popular among driving enthusiasts.", "category": "About the Event"}, {"q": "Where can I purchase photos from the Tail of the Dragon?", "a": "There are photographers like Killboy, 129Slayer, and US129Photos. Visit their sites, search by date and vehicle. They often group Prius and the Dragon shots together. <br><br><a href='https://www.killboy.com'>Killboy</a> | <a href='https://www.129slayer.com'>129Slayer</a> | <a href='https://www.us129photos.com'>US129Photos</a>", "category": "About the Event"}, {"q": "Where can I get Prius and the Dragon merch?", "a": "Killboy Store usually carries official merch during the event. Also, don\u2019t forget to grab your free sticker!", "category": "About the Event"}, {"q": "Is this a race?", "a": "No. This is a public road with speed limits and safety rules. It is not a race \u2014 drive within your comfort level and obey posted limits.", "category": "Driving & Safety"}, {"q": "What driving groups are available?", "a": "We have 3 groups based on comfort and driving style: Spirited Run, Standard Run, and Stereotype Run.", "category": "Driving & Safety"}, {"q": "Is my Prius suitable for this drive?", "a": "Most stock and modded Prius models are fine. Make sure your brakes and tires are in good condition.", "category": "Driving & Safety"}, {"q": "When is the group photo?", "a": "Usually taken in the morning at Fontana Dam before the drive. Exact time will be posted day-of.", "category": "Planning & Schedule"}, {"q": "Do I need to register?", "a": "Registration is not yet open for 2026. Check the Facebook group for updates on when and how to register.", "category": "Planning & Schedule"}, {"q": "Do passengers need to register?", "a": "Not for the main event, but we need a headcount for lunch. More details will be posted closer to the event.", "category": "Planning & Schedule"}, {"q": "Is there a cost to attend?", "a": "The event is free! Just budget for lodging, food, gas, merch, and any optional items.", "category": "Planning & Schedule"}, {"q": "What if I\u2019m not staying both days?", "a": "That\u2019s fine! You\u2019re welcome to attend one or both days. Just let us know for planning purposes.", "category": "Planning & Schedule"}, {"q": "What about the 2026 event?", "a": "We\u2019re planning for April 10\u201311, 2026. Day one will feature off-roading for lifted Prius builds; day two is the main event drive and lunch.", "category": "Planning & Schedule"}, {"q": "How\u2019s cell reception?", "a": "Spotty at best in the mountains. Best reception is near towns and Tapoco Lodge. Download maps ahead of time!", "category": "Connectivity & Logistics"}, {"q": "Where\u2019s the nearest gas station?", "a": "There are stations in Robbinsville, NC. Fill up before the drive. Gas is not available at the Dam or on the Dragon itself.", "category": "Connectivity & Logistics"}, {"q": "Are EVs/PHEVs supported?", "a": "Yes. Most attendees are hybrid Prius drivers, but plug-ins and other variants are welcome. Bring a charging plan if needed.", "category": "Connectivity & Logistics"}, {"q": "What awards were given in 2025?", "a": "Awards included: Lowest Mileage, Best Off-Road Prius, Best Street Prius, Best Camping Prius, Highest Mileage, \u201cCool Prius,\u201d 1st International Prius, Farthest Traveled, Longest Owned, and Best Bumper Stickers.", "category": "Extras & Awards"}, {"q": "What else is there to see nearby?", "a": "Check out the Cherohala Skyway, Fontana Dam, Moonshiner 28, Joyce Kilmer Forest, and Lake Santeetlah.", "category": "Extras & Awards"}, {"q": "Will there be updates if things change?", "a": "Yes! The Facebook group is the best place for real-time info and updates.", "category": "Extras & Awards"}, {"q": "Is the event family friendly?", "a": "Yes! Kids are welcome, though keep in mind some roads are curvy and remote. We aim for a respectful and inclusive atmosphere.", "category": "Extras & Awards"}];
 
     const grouped = faqs.reduce((acc, item) => {
       if (!acc[item.category]) acc[item.category] = [];
@@ -171,11 +80,17 @@
       return acc;
     }, {});
 
+    const orderedCategories = ["About the Event", "Driving & Safety", "Planning & Schedule", "Connectivity & Logistics", "Extras & Awards"];
+
     const container = document.getElementById('faq-container');
-    for (let category in grouped) {
+
+    orderedCategories.forEach(category => {
+      const section = document.createElement('div');
+      section.className = 'faq-section';
+
       const header = document.createElement('h2');
       header.textContent = category;
-      container.appendChild(header);
+      section.appendChild(header);
 
       grouped[category].forEach(faq => {
         const btn = document.createElement('button');
@@ -184,17 +99,19 @@
 
         const panel = document.createElement('div');
         panel.className = 'panel';
-        panel.innerHTML = `<p>${faq.a}</p>`;
+        panel.innerHTML = '<p>' + faq.a + '</p>';
 
         btn.onclick = function () {
           this.classList.toggle('active');
           panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
         };
 
-        container.appendChild(btn);
-        container.appendChild(panel);
+        section.appendChild(btn);
+        section.appendChild(panel);
       });
-    }
+
+      container.appendChild(section);
+    });
   </script>
 </body>
 </html>
