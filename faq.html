@@ -1,27 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prius and the Dragon FAQ</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>FAQ Full</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: transparent;
+      background: transparent;
       color: #eee;
       padding: 2rem;
-    }
-    h2 {
-      margin-top: 4rem;
-      border-bottom: 2px solid #444;
-      padding-bottom: 0.25rem;
-      color: #ccc;
-      text-transform: uppercase;
-      font-size: 1.4rem;
-    }
-    .faq-section {
-      margin-bottom: 4rem;
     }
     .accordion {
       background-color: #111;
@@ -32,39 +22,41 @@
       border: 1px solid #444;
       border-radius: 0.5rem;
       text-align: left;
-      outline: none;
-      transition: background-color 0.2s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       margin-top: 1rem;
     }
-    .accordion:hover {
-      background-color: #222;
-    }
-    .active, .accordion:focus {
-      background-color: #222;
+    .accordion-icon {
+      font-size: 1.4rem;
+      padding-left: 1rem;
+      color: #ccc;
     }
     .panel {
-      padding: 1rem;
       display: none;
       background-color: #111;
       border: 1px solid #444;
       border-top: none;
-      border-radius: 0 0 0.5rem 0.5rem;
+      padding: 1rem;
       color: #ccc;
       margin-bottom: 1rem;
+      border-radius: 0 0 0.5rem 0.5rem;
+    }
+    h2 {
+      color: #ccc;
+      margin-top: 2rem;
+      border-bottom: 2px solid #444;
     }
     a {
-      color: #ccc !important;
+      color: #ccc;
       text-decoration: underline;
-    }
-    a:hover {
-      text-decoration: none;
     }
   </style>
 </head>
 <body>
   <div id="faq-container"></div>
   <script>
-    const faqs = [{"q": "What is Prius and the Dragon?", "a": "An annual community event for Prius owners held on the Tail of the Dragon, started in 2023, with group drives, photos, lunch, merch, and awards.", "category": "About the Event"}, {"q": "What is the Tail of the Dragon?", "a": "The Tail of the Dragon is a legendary 11-mile stretch of U.S. Highway 129 located on the border of North Carolina and Tennessee. Famous for its 318 curves, it's become a bucket-list destination for driving and riding enthusiasts from around the world. Originally just a remote mountain road, it gained notoriety in the motorsports and enthusiast community due to its technical turns and scenic Appalachian views. No intersecting driveways or side roads make it an uninterrupted experience perfect for group drives and photography.", "category": "About the Event"}, {"q": "Where can I purchase photos from the Tail of the Dragon?", "a": "Killboy is one of the main photographers on the Dragon and a proud sponsor of our event. They usually capture great shots of the group. There are also a few other photographers out there\u2014keep an eye out as you drive, and check their sites after the event to find your photos.", "category": "About the Event"}, {"q": "Where can I get Prius and the Dragon merch?", "a": "Killboy Store usually has some Prius-themed Tail of the Dragon merch available during the event. We also usually offer an event shirt and a few other items closer to the event. Don\u2019t forget your Prius and the Dragon sticker for that year!", "category": "About the Event"}, {"q": "Is this a race?", "a": "No. This is a public road with speed limits and safety rules. It is not a race \u2014 drive within your comfort level and obey posted limits.", "category": "Driving & Safety"}, {"q": "What driving groups are available?", "a": "We have 3 groups based on comfort and driving style: Spirited Run, Standard Run, and Stereotype Run.", "category": "Driving & Safety"}, {"q": "Is my Prius suitable for this drive?", "a": "Most stock and modded Prius models are fine. Make sure your brakes and tires are in good condition.", "category": "Driving & Safety"}, {"q": "When is the group photo?", "a": "Usually taken in the morning at Fontana Dam before the drive. Exact time will be posted day-of.", "category": "Planning & Schedule"}, {"q": "Do I need to register?", "a": "Registration is not yet open for 2026. Check the <a href='https://www.facebook.com/groups/3798433027051595/?ref=share&mibextid=NSMWBT' target='_blank'>Facebook group</a> for updates on when and how to register.", "category": "Planning & Schedule"}, {"q": "Do passengers need to register?", "a": "Not for the main event, but we need a headcount for lunch. More details will be posted closer to the event.", "category": "Planning & Schedule"}, {"q": "Is there a cost to attend?", "a": "The event is free! Just budget for lodging, food, gas, merch, and any optional items. The group luncheon does have a cost, and pricing for that will be posted closer to the event.", "category": "Planning & Schedule"}, {"q": "What if I\u2019m not staying both days?", "a": "That\u2019s fine! You\u2019re welcome to attend one or both days. Just let us know for planning purposes.", "category": "Planning & Schedule"}, {"q": "What about the 2026 event?", "a": "We\u2019re planning for April 10\u201311, 2026. Day one will feature off-roading for lifted Prius builds; day two is the main event drive and lunch.", "category": "Planning & Schedule"}, {"q": "How\u2019s cell reception?", "a": "Spotty at best in the mountains. Best reception is near towns and Tapoco Lodge. Download maps ahead of time!", "category": "Connectivity & Logistics"}, {"q": "Where\u2019s the nearest gas station?", "a": "There are stations in Robbinsville, NC. Fill up before the drive. Gas is not available at the Dam or on the Dragon itself.", "category": "Connectivity & Logistics"}, {"q": "Where is the nearest EV or PHEV charging near the Tail of the Dragon/event?", "a": "Charging options are limited in the immediate area, so plan ahead. The Tapoco Lodge has limited charging access, and your best bet is to top off in nearby towns like Robbinsville or Maryville. Check this link to stay up to date on charging station locations: <a href='https://afdc.energy.gov/fuels/electricity-locations#/find/nearest?fuel=ELEC' target='_blank'>DOE Charging Locator</a>.", "category": "Connectivity & Logistics"}, {"q": "What awards were given in 2025?", "a": "Awards included: Lowest Mileage, Best Off-Road Prius, Best Street Prius, Best Camping Prius, Highest Mileage, \u201cCool Prius,\u201d Farthest Traveled, Longest Owned, and Best Bumper Stickers.", "category": "Extras & Awards"}, {"q": "What else is there to see nearby?", "a": "Check out the Cherohala Skyway, Fontana Dam, Moonshiner 28, Joyce Kilmer Forest, and Lake Santeetlah.", "category": "Extras & Awards"}, {"q": "Will there be updates if things change?", "a": "Yes! The <a href='https://www.facebook.com/groups/3798433027051595/?ref=share&mibextid=NSMWBT' target='_blank'>Facebook group</a> is the best place for real-time info and updates.", "category": "Extras & Awards"}, {"q": "Is the event family friendly?", "a": "Yes! Kids are welcome, though keep in mind some roads are curvy and remote. We aim for a respectful and inclusive atmosphere.", "category": "Extras & Awards"}];
+    const faqs = [{"q": "What is Prius and the Dragon?", "a": "An annual community event for Prius owners held on the Tail of the Dragon, started in 2023, with group drives, photos, lunch, merch, and awards.", "category": "About the Event"}, {"q": "What is the Tail of the Dragon?", "a": "The Tail of the Dragon is a legendary 11-mile stretch of U.S. Highway 129 located on the border of North Carolina and Tennessee. Famous for its 318 curves, it's become a bucket-list destination for driving and riding enthusiasts from around the world. Originally just a remote mountain road, it gained notoriety in the motorsports and enthusiast community due to its technical turns and scenic Appalachian views. No intersecting driveways or side roads make it an uninterrupted experience perfect for group drives and photography.", "category": "About the Event"}, {"q": "Where can I purchase photos from the Tail of the Dragon?", "a": "Killboy is one of the main photographers on the Dragon and a proud sponsor of our event. They usually capture great shots of the group. You can browse and purchase photos at <a href='https://www.killboy.com/' target='_blank'>killboy.com</a>. Most years, they also offer a discount code for online photo purchases that's given out at the event. There are also a few other photographers out there\u2014keep an eye out as you drive, and check their sites after the event to find your photos.", "category": "About the Event"}, {"q": "Where can I get Prius and the Dragon merch?", "a": "Killboy Store usually has some Prius-themed Tail of the Dragon merch available during the event. We also usually offer an event shirt and a few other items closer to the event. Don\u2019t forget your Prius and the Dragon sticker for that year!", "category": "About the Event"}, {"q": "Is this a race?", "a": "No. This is a public road with speed limits and safety rules. It is not a race \u2014 drive within your comfort level and obey posted limits.", "category": "Driving & Safety"}, {"q": "What driving groups are available?", "a": "We have 3 groups based on comfort and driving style: Spirited Run, Standard Run, and Stereotype Run.", "category": "Driving & Safety"}, {"q": "Is my Prius suitable for this drive?", "a": "Most stock and modded Prius models are fine. Make sure your brakes and tires are in good condition.", "category": "Driving & Safety"}, {"q": "When is the group photo?", "a": "Usually taken in the morning at Fontana Dam before the drive. Exact time will be posted day-of.", "category": "Planning & Schedule"}, {"q": "Do I need to register?", "a": "Registration is not yet open for 2026. Check the <a href='https://www.facebook.com/groups/3798433027051595/?ref=share&mibextid=NSMWBT' target='_blank'>Facebook group</a> for updates on when and how to register.", "category": "Planning & Schedule"}, {"q": "Do passengers need to register?", "a": "Not for the main event, but we need a headcount for lunch. More details will be posted closer to the event.", "category": "Planning & Schedule"}, {"q": "Is there a cost to attend?", "a": "The event is free! Just budget for lodging, food, gas, merch, and any optional items. The group luncheon does have a cost, and pricing for that will be posted closer to the event.", "category": "Planning & Schedule"}, {"q": "What if I\u2019m not staying both days?", "a": "That\u2019s fine! You\u2019re welcome to attend one or both days. Just let us know for planning purposes.", "category": "Planning & Schedule"}, {"q": "What about the 2026 event?", "a": "We\u2019re planning for April 10\u201311, 2026. Day one will feature off-roading for lifted Prius builds; day two is the main event drive and lunch.", "category": "Planning & Schedule"}, {"q": "How\u2019s cell reception?", "a": "Spotty at best in the mountains. Best reception is near towns and Tapoco Lodge. Download maps ahead of time!", "category": "Connectivity & Logistics"}, {"q": "Where\u2019s the nearest gas station?", "a": "There are stations in Robbinsville, NC. Fill up before the drive. Gas is not available at the Dam or on the Dragon itself.", "category": "Connectivity & Logistics"}, {"q": "Where is the nearest EV or PHEV charging near the Tail of the Dragon/event?", "a": "Charging options are limited in the immediate area, so plan ahead. The Tapoco Lodge has limited charging access, and your best bet is to top off in nearby towns like Robbinsville or Maryville. Check this link to stay up to date on charging station locations: <a href='https://afdc.energy.gov/fuels/electricity-locations#/find/nearest?fuel=ELEC' target='_blank'>DOE Charging Locator</a>.", "category": "Connectivity & Logistics"}, {"q": "What awards were given in 2025?", "a": "Awards included: Lowest Mileage, Best Off-Road Prius, Best Street Prius, Best Camping Prius, Highest Mileage, \u201cCool Prius,\u201d Farthest Traveled, Longest Owned, and Best Bumper Stickers.", "category": "Extras & Awards"}, {"q": "What else is there to see nearby?", "a": "Check out the Cherohala Skyway, Fontana Dam, Moonshiner 28, Joyce Kilmer Forest, and Lake Santeetlah.", "category": "Extras & Awards"}, {"q": "Will there be updates if things change?", "a": "Yes! The <a href='https://www.facebook.com/groups/3798433027051595/?ref=share&mibextid=NSMWBT' target='_blank'>Facebook group</a> is the best place for real-time info and updates.", "category": "Extras & Awards"}, {"q": "Is the event family friendly?", "a": "Yes! Kids are welcome, though keep in mind some roads are curvy and remote. We aim for a respectful and inclusive atmosphere.", "category": "Extras & Awards"}];
 
     const grouped = faqs.reduce((acc, item) => {
       if (!acc[item.category]) acc[item.category] = [];
@@ -72,39 +64,37 @@
       return acc;
     }, {});
 
-    const orderedCategories = ["About the Event", "Driving & Safety", "Planning & Schedule", "Connectivity & Logistics", "Extras & Awards"];
-
+    const categories = ["About the Event", "Driving & Safety", "Planning & Schedule", "Connectivity & Logistics", "Extras & Awards"];
     const container = document.getElementById('faq-container');
 
-    orderedCategories.forEach(category => {
-      const section = document.createElement('div');
-      section.className = 'faq-section';
-
+    categories.forEach(category => {
       const header = document.createElement('h2');
       header.textContent = category;
-      section.appendChild(header);
+      container.appendChild(header);
 
       grouped[category].forEach(faq => {
-        const btn = document.createElement('button');
-        btn.className = 'accordion';
-        btn.innerHTML = faq.q;
+        const button = document.createElement('button');
+        button.className = 'accordion';
+        button.innerHTML = `<span>${faq.q}</span><span class='accordion-icon'>+</span>`;
 
         const panel = document.createElement('div');
         panel.className = 'panel';
-        panel.innerHTML = '<p>' + faq.a + '</p>';
+        panel.innerHTML = faq.a;
 
-        btn.onclick = function () {
-          this.classList.toggle('active');
+        button.addEventListener('click', function () {
           const isOpen = panel.style.display === 'block';
           panel.style.display = isOpen ? 'none' : 'block';
-          setTimeout(sendHeight, 100);
-        };
+          const icon = button.querySelector('.accordion-icon');
+          icon.textContent = isOpen ? '+' : '–';
+          setTimeout(() => {
+            const height = document.documentElement.scrollHeight;
+            window.parent.postMessage({ iframeHeight: height }, "*");
+          }, 100);
+        });
 
-        section.appendChild(btn);
-        section.appendChild(panel);
+        container.appendChild(button);
+        container.appendChild(panel);
       });
-
-      container.appendChild(section);
     });
   </script>
   <script>
