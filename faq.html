@@ -95,8 +95,9 @@
 
         btn.onclick = function () {
           this.classList.toggle('active');
-          panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
-          sendHeight();
+          const isOpen = panel.style.display === 'block';
+          panel.style.display = isOpen ? 'none' : 'block';
+          setTimeout(sendHeight, 100);
         };
 
         section.appendChild(btn);
